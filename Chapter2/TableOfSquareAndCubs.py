@@ -1,32 +1,34 @@
-userInput0 = int(input())
-userInputs = userInput0 * userInput0
-userInputc = userInputs * userInput0
+number = 0
+number_square = number * number
+number_cube = number_square * number
 
-userInput1 = int(input())
-userInput1s = userInput1 * userInput1
-userInput1c = userInput1s * userInput1
+first_number = 1
+first_number_square = first_number * first_number
+first_number_cube = first_number_square * first_number
 
-userInput2 = int(input())
-userInput2s = userInput2 * userInput2
-userInput2c = userInput2s * userInput2
+second_number = 2
+second_number_square = second_number * second_number
+second_number_cube = second_number_square * second_number
 
-userInput3 = int(input())
-userInput3s = userInput3 * userInput3
-userInput3c = userInput3s * userInput3
+third_number = 3
+third_number_square = third_number * third_number
+third_number_cube = third_number_square * third_number
 
-userInput4 = int(input())
-userInput4s = userInput4 * userInput4
-userInput4c = userInput4s * userInput4
+fourth_number = 4
+fourth_number_square = fourth_number * fourth_number
+fourth_number_cube = fourth_number_square * fourth_number
 
-userInput5 = int(input())
-userInput5s = userInput5 * userInput5
-userInput5c = userInput5s * userInput5
+fifth_number = 5
+fifth_number_square = fifth_number * fifth_number
+fifth_number_cube = fifth_number_square * fifth_number
+
+
 
 
 print("NUMBER\t\t\t   SQUARE  \t\t\t    CUBE")
-print(  userInput0  ,         "\t\t\t\t\t" ,   userInputs,  "\t\t\t\t\t",  userInputc)
-print(  userInput1  ,         "\t\t\t\t\t" ,   userInput1s,  "\t\t\t\t\t",  userInput1c)
-print(  userInput2  ,         "\t\t\t\t\t" ,   userInput2s,  "\t\t\t\t\t",  userInput2c)
-print(  userInput3  ,         "\t\t\t\t\t" ,   userInput3s,  "\t\t\t\t\t",  userInput3c)
-print(  userInput4  ,         "\t\t\t\t\t" ,   userInput4s,  "\t\t\t\t",  userInput4c)
-print(  userInput5  ,         "\t\t\t\t\t" ,   userInput5s,  "\t\t\t\t",  userInput5c)
+print(number,         "\t\t\t\t\t", number_square,  "\t\t\t\t\t", number_cube)
+print(first_number,         "\t\t\t\t\t", first_number_square,    "\t\t\t\t\t",  first_number_cube)
+print(second_number,         "\t\t\t\t\t", second_number_square,  "\t\t\t\t\t",  second_number_cube)
+print(third_number,         "\t\t\t\t\t", third_number_square,  "\t\t\t\t\t",  third_number_cube)
+print(fourth_number,         "\t\t\t\t\t", fourth_number_square,  "\t\t\t\t",  fourth_number_cube)
+print(fifth_number,         "\t\t\t\t\t", fifth_number_square,  "\t\t\t\t",  fifth_number_cube)
