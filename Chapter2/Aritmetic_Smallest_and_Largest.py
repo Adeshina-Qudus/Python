@@ -4,7 +4,7 @@ user_Thirdinput = int(input("ENTER A NUMBER:"))
 
 print("SUM OF THE THREE NUMBERS IS :", user_Firstinput+user_Secondinput+user_Thirdinput)
 print("THE AVERAGE OF THE THREE NUMBERS IS :", user_Firstinput+user_Secondinput+user_Thirdinput / 3)
-print("THE PRODUCT OF THE THREE NUMMBERS IS :", user_Firstinput*user_Secondinput*user_Thirdinput)
+print("THE PRODUCT OF THE THREE NUMBERS IS :", user_Firstinput*user_Secondinput*user_Thirdinput)
 
 if user_Firstinput < user_Secondinput and user_Firstinput < user_Thirdinput:
       print(user_Firstinput, " IS THE SMALLEST NUMBER")

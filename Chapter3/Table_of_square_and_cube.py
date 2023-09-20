@@ -1,10 +1,7 @@
-count = 1
-number = 1
-square = 0
-cube = 0
+print("number   square       cube")
+number = 0
 while number <= 5:
-    number = number
-    square = count * number
-    cube = cube * number * number
-
-    print( number, "\t" ,square , "\t" ,cube)
+    square_number = number * number
+    cube_number = square_number * number
+    print(f"{number:5}    \t{square_number:>3}    \t {cube_number:>3}")
+    number = number + 1
