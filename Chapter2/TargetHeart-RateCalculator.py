@@ -5,3 +5,5 @@ second_target_rate = 85 * maximum_heart_rate / 100
 print(" maximum_heart_rate is " ,maximum_heart_rate )
 print("first_target_rate is " ,first_target_rate)
 print("second_target_rate is " ,second_target_rate)
+
+# use one print statement
