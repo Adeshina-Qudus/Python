@@ -32,3 +32,5 @@ print(second_number,         "\t\t\t\t\t", second_number_square,  "\t\t\t\t\t", 
 print(third_number,         "\t\t\t\t\t", third_number_square,  "\t\t\t\t\t",  third_number_cube)
 print(fourth_number,         "\t\t\t\t\t", fourth_number_square,  "\t\t\t\t",  fourth_number_cube)
 print(fifth_number,         "\t\t\t\t\t", fifth_number_square,  "\t\t\t\t",  fifth_number_cube)
+
+# use one print function and stop naming file like java
