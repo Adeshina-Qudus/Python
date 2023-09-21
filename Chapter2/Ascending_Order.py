@@ -32,3 +32,5 @@ print()
 print(f"{smallest} , IS THE SMALLEST NUMBER ")
 print(f"{middle} , IS THE MIDDLE NUMBER")
 print(f"{largest} , IS THE BIGGEST NUMBER")
+
+#use one print statement
