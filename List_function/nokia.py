@@ -25,45 +25,36 @@ def mainMenu():
             """
     print(menu)
 
-    menu = int(input())
+    menu = input()
+    while menu < "1" or menu > "13":
+        print("Invalid input")
+        menu = input("Enter a number from [1 to 13]")
     match menu:
-        case 1:
+        case "1":
             phoneBook()
-            return
-        case 2:
+        case "2":
             message()
-            return
-        case 3:
+        case "3":
             chat()
-            return
-        case 4:
+        case "4":
             callRegister()
-            return
-        case 5:
+        case "5":
             tones()
-            return
-        case 6:
+        case "6":
             settings()
-            return
-        case 7:
+        case "7":
             callDivert()
-            return
-        case 8:
+        case "8":
             games()
-            return
-        case 9:
+        case "9":
             calculator()
-            return
-        case 10:
+        case "10":
             reminders()
-            return
-        case 11:
+        case "11":
             clock()
-            return
-        case 12:
+        case "12":
             profiles()
-            return
-        case 13:
+        case "13":
             SIM_services()
 
 
@@ -89,64 +80,76 @@ def phoneBook():
 *************************
                 """
     print(phonebook)
-    phonebook = int(input())
-    match phonebook:
-        case 1:
-            print("Search")
-            return
-        case 2:
-            print("Service Nos.")
-            return
-        case 3:
-            print("Add name")
-            return
-        case 4:
-            print("Erase")
-            return
-        case 5:
-            print("Edit")
-            return
-        case 6:
-            print("Assign tone")
-            return
-        case 7:
-            print("Send b'card")
-            return
-        case 8:
-            tov = """
-*************************
-    *****^^^^****       *
-    *   OPTION  *       *
-    *****^^^^****       *
-*************************
-1. Type of view         *
-2. Memory status        *
-3. go back              *
-4. main menu            *
-*************************
-             """
-            print(tov)
-            tov = int(input())
-            match tov:
-                case 1:
-                    print("Type of view")
-                    return
-                case 2:
-                    print("Memory status")
-                    return
-                case 3:
-                    phoneBook()
-                case 4:
-                    mainMenu()
+    phonebook = input()
+    while phonebook < "1" or phonebook > "11":
+        print("""
+invalid input 
+Enter a number from [1 to 11] 
+                        """)
+        phonebook = input()
+        match phonebook:
+            case "1":
+                print("Search")
+                return
+            case "2":
+                print("Service Nos.")
+                return
+            case "3":
+                print("Add name")
+                return
+            case "4":
+                print("Erase")
+                return
+            case "5":
+                print("Edit")
+                return
+            case "6":
+                print("Assign tone")
+                return
+            case "7":
+                print("Send b'card")
+                return
+            case "8":
+                tov = """
+    *************************
+        *****^^^^****       *
+        *   OPTION  *       *
+        *****^^^^****       *
+    *************************
+    1. Type of view         *
+    2. Memory status        *
+    3. go back              *
+    4. main menu            *
+    *************************
+                 """
+                print(tov)
+                tov = input()
+                while tov < "1" or tov > "4":
+                    print("""
+invalid input 
+Enter a number from [1 to 4] 
+                                    """)
+                    tov = input()
+                    match tov:
+                        case "1":
+                            print("Type of view")
+                            return
+                        case "2":
+                            print("Memory status")
+                            return
+                        case "3":
+                            phoneBook()
+                        case "4":
+                            mainMenu()
 
-        case 9:
-            print("Speed dials")
-            return
-        case 10:
-            print("Voice tags")
-            return
-        case 11:
-            mainMenu()
+            case "9":
+                print("Speed dials")
+                return
+            case "10":
+                print("Voice tags")
+                return
+            case "11":
+                mainMenu()
 
 
 def message():
@@ -170,85 +173,109 @@ def message():
 *****************************
 """
     print(msg)
-    match msg:
-        case 1:
-            print("write messages")
-            return
-        case 2:
-            print("inbox")
-            return
-        case 3:
-            print("Outbox")
-            return
-        case 4:
-            print("Picture messages")
-            return
-        case 5:
-            print("Templates")
-            return
-        case 6:
-            print("Smileys")
-            return
-        case 7:
-            set1 = """
+    msg = input()
+    while msg < "1" or msg > "11":
+        print("""
+invalid input 
+Enter a number from [1 to 11] 
+                        """)
+        msg = input()
+        match msg:
+            case "1":
+                print("write messages")
+                return
+            case "2":
+                print("inbox")
+                return
+            case "3":
+                print("Outbox")
+                return
+            case "4":
+                print("Picture messages")
+                return
+            case "5":
+                print("Templates")
+                return
+            case "6":
+                print("Smileys")
+                return
+            case "7":
+                set1 = """
 1. Set
 2. Common 3
 3. GO back
-                     """
-            print(set1)
-            set1 = int(input())
-            match set1:
-                case 1:
-                    msg1 = """
+                         """
+                print(set1)
+                set1 = (input())
+                while set1 < "1" or set1 > "3":
+                    print("""
+invalid input 
+Enter a number from [1 to 3] 
+                                    """)
+                    set1 = input()
+                    match set1:
+                        case "1":
+                            msg1 = """
 1. Message centre number
 2. Messages sent as
 3. Message validity
 4. go back
 5. main menu
-                       """
-                    print(msg1)
-                    msg1 = int(input())
-                    match msg1:
-                        case 1:
-                            print("Message centre number")
-                        case 2:
-                            print("Message sent as ")
-                        case 3:
-                            print("Message validity")
-                        case 4:
-                            message()
-                        case 5:
-                            mainMenu()
-                case 2:
-                    delivery = """
+                           """
+                            print(msg1)
+                            msg1 = (input())
+                            while msg1 < "1" or msg1 > "5":
+                                print("""
+invalid input 
+Enter a number from [1 to 5] 
+                                                """)
+                                msg1 = input()
+                                match msg1:
+                                    case "1":
+                                        print("Message centre number")
+                                    case "2":
+                                        print("Message sent as ")
+                                    case "3":
+                                        print("Message validity")
+                                    case "4":
+                                        message()
+                                    case "5":
+                                        mainMenu()
+                        case "2":
+                            delivery = """
 1. Delivery reports
 2. Reply via same centre
 3. Character support
 4. go back
 5. main menu
-               """
-                    print(delivery)
-                    delivery = int(input())
-                    match delivery:
-                        case 1:
-                            print("Delivery reports")
-
-                        case 2:
-                            print("Reply via same centre")
-                        case 3:
-                            print("Character support")
-                        case 4:
-                            message()
-                        case 5:
-                            mainMenu()
-        case 8:
-            print("Info service")
-        case 9:
-            print("Voice mailbox number")
-        case 10:
-            print("Service command editor")
-        case 11:
-            mainMenu()
+                   """
+                            print(delivery)
+                            delivery = (input())
+                            while delivery < "1" or delivery > "5":
+                                print("""
+invalid input 
+Enter a number from [1 to 5] 
+                                                """)
+                                delivery = input()
+                                match delivery:
+                                    case "1":
+                                        print("Delivery reports")
+                                    case "2":
+                                        print("Reply via same centre")
+                                    case "3":
+                                        print("Character support")
+                                    case "4":
+                                        message()
+                                    case "5":
+                                        mainMenu()
+            case "8":
+                print("Info service")
+            case "9":
+                print("Voice mailbox number")
+            case "10":
+                print("Service command editor")
+            case "11":
+                mainMenu()
 
 
 def chat():
@@ -257,12 +284,18 @@ def chat():
 2. go back
           """
     print(cha)
-    cha = int(input())
-    match cha:
-        case 1:
-            print("Chat")
-        case 2:
-            mainMenu()
+    cha = (input())
+    while cha < "1" or cha > "2":
+        print("""
+invalid input 
+Enter a number from [1 to 2] 
+                        """)
+        cha = input()
+        match cha:
+            case "1":
+                print("Chat")
+            case "2":
+                mainMenu()
 
 
 def callRegister():
@@ -277,9 +310,15 @@ def callRegister():
 8. Prepaid credit
                  """
     print(call)
-    call = int(input())
+    call = (input())
+    while call < "1" or call > "8":
+        print("""
+invalid input 
+Enter a number from [1 to 8] 
+                        """)
+        call = input()
     match call:
-        case 1:
+        case "1":
             print("""
 1. DELIGHTED
    08072034442
@@ -288,13 +327,13 @@ def callRegister():
 3. UDEME
    090182966447
                 """)
-        case 2:
+        case "2":
             print("Received calls")
-        case 3:
+        case "3":
             print("Dialled number")
-        case 4:
+        case "4":
             print("Erase recent call list")
-        case 5:
+        case "5":
             lit = """
 1. Last Call duration
 2. All calls' duration
@@ -304,56 +343,75 @@ def callRegister():
 6. Go back
                     """
             print(lit)
-            lit = int(input())
+            lit = (input())
+            while lit < "1" or lit > "6":
+                print("""
+invalid input 
+Enter a number from [1 to 6] 
+                                """)
+                lit = input()
             match lit:
-                case 1:
+                case "1":
                     print("Last calls duration")
-                case 2:
+                case "2":
                     print("All calls' duration")
-                case 3:
+                case "3":
                     print("Received calls")
-                case 4:
+                case "4":
                     print("Dialled calls' duration")
-                case 5:
+                case "5":
                     print("Clear timers")
-                case 6:
+                case "6":
                     callRegister()
 
-        case 6:
+        case "6":
             las = """
 1. Last call cost
 2. All calls' cost
 3. Clear counters
 4. Go bck
-                  """
+             """
             print(las)
+            las = input()
+            while las < "1" or las > "4":
+                print("""
+invalid input 
+Enter a number from [1 to 4] 
+                                """)
+                las = input()
             match las:
-                case 1:
+                case "1":
                     print("Last call cost")
-                case 2:
+                case "2":
                     print("All calls' cost")
-                case 3:
+                case "3":
                     print("Clear counters")
-                case 4:
+                case "4":
                     callRegister()
 
-        case 7:
+        case "7":
             call = """
 1. Call cost limit
 2. Show costs in
 3. Go back
                     """
             print(call)
-            call = int(input())
+            call = (input())
+            while call < "1" or call > "3":
+                print("""
+invalid input 
+Enter a number from [1 to 3] 
+                                """)
+                call = input()
             match call:
-                case 1:
+                case "1":
                     print("Call cost limit")
-                case 2:
+                case "2":
                     print("Sow costs in")
-                case 3:
+                case "3":
                     callRegister()
 
-        case 8:
+        case "8":
             print("Prepaid credit")
 
 
@@ -376,27 +434,33 @@ def tones():
 10.Go back
                         """
     print(tone)
-    tone = int(input())
+    tone = (input())
+    while tone < "1" or tone > "10":
+        print("""
+invalid input 
+Enter a number from [1 to 10] 
+                        """)
+        tone = input()
     match tone:
-        case 1:
+        case "1":
             print("Ringing tone")
-        case 2:
+        case "2":
             print("Ringing volume")
-        case 3:
+        case "3":
             print("Incoming call alert")
-        case 4:
+        case "4":
             print("Composer")
-        case 5:
+        case "5":
             print("Message alert tone")
-        case 6:
+        case "6":
             print("Keypad tone")
-        case 7:
+        case "7":
             print("Warning and game tones")
-        case 8:
+        case "8":
             print("Vibrating alert")
-        case 9:
+        case "9":
             print("Screen saver")
-        case 10:
+        case "10":
             tones()
 
 
@@ -408,9 +472,12 @@ def settings():
 4. Restore factory settings
                         """
     print(sett)
-    sett = int(input())
+    sett = (input())
+    while sett < "1" or sett > "4":
+        print("invalid input ")
+        sett = input()
     match sett:
-        case 1:
+        case "1":
             auto = """
 1. Automatic redial
 2. Speed dialing
@@ -421,23 +488,29 @@ def settings():
 7. Go back
                                         """
             print(auto)
-            auto = int(input())
+            auto = (input())
+            while auto < "1" or auto > "7":
+                print("""
+invalid input 
+Enter a number from [1 to 2] 
+                                """)
+                auto = input()
             match auto:
-                case 1:
+                case "1":
                     print("Automatic redial")
-                case 2:
+                case "2":
                     print("Speed dialing")
-                case 3:
+                case "3":
                     print("Call waiting options")
-                case 4:
+                case "4":
                     print("Own number sending")
-                case 5:
+                case "5":
                     print("Phone line in use")
-                case 6:
+                case "6":
                     print("Automatic answer")
-                case 7:
+                case "7":
                     settings()
-        case 2:
+        case "2":
             lang = """
 *************************
     *****^^^^****       *
@@ -453,24 +526,30 @@ def settings():
 7. Go back
                         """
             print(lang)
-            lang = int(input())
+            lang = (input())
+            while lang < "1" or lang > "7":
+                print("""
+invalid input 
+Enter a number from [1 to 7] 
+                                """)
+                lang = input()
             match lang:
-                case 1:
+                case "1":
                     print("Language")
-                case 2:
+                case "2":
                     print("Call info display")
-                case 3:
+                case "3":
                     print("Welcome note")
-                case 4:
+                case "4":
                     print("Network selection")
-                case 5:
+                case "5":
                     print("Lights")
-                case 6:
+                case "6":
                     print("Confirm SIM service action")
-                case 7:
+                case "7":
                     settings()
 
-        case 3:
+        case "3":
             pin = """
 1. PIN code request
 2. Call barring service
@@ -481,24 +560,30 @@ def settings():
 7. Go back
                 """
             print(pin)
-            pin = int(input())
+            pin = (input())
+            while pin < "1" or pin > "7":
+                print("""
+invalid input 
+Enter a number from [1 to 7] 
+                                """)
+                pin = input()
             match pin:
-                case 1:
+                case "1":
                     print("PIN code request")
-                case 2:
+                case "2":
                     print("Call barring service")
-                case 3:
+                case "3":
                     print("Fixed dilling")
-                case 4:
+                case "4":
                     print("Closed user group")
-                case 5:
+                case "5":
                     print("Phone security")
-                case 6:
+                case "6":
                     print("Change access codes")
-                case 7:
+                case "7":
                     settings()
 
-        case 4:
+        case "4":
             print("Restore factory settings")
 
 
@@ -508,25 +593,37 @@ def callDivert():
 2. Go back
                  """
     print(call)
-    call = int(input())
+    call = (input())
+    while call < "1" or call > "2":
+        print("""
+invalid input 
+Enter a number from [1 to 2] 
+                        """)
+        call = input()
     match call:
-        case 1:
+        case "1":
             print("call divert")
-        case 2:
+        case "2":
             callDivert()
 
 
 def games():
     game = """
-                 1.Games
-                 2.Go back
+1.Games
+2.Go back
                         """
     print(game)
-    game = int(input())
+    game = (input())
+    while game < "1" or game > "2":
+        print("""
+invalid input 
+Enter a number from [1 to 2] 
+                """)
+        game = input()
     match game:
-        case 1:
+        case "1":
             print("Games")
-        case 2:
+        case "2":
             games()
 
 
@@ -536,9 +633,15 @@ def calculator():
 2.Go back
                     """
     print(cal)
-    cal = int(input())
+    cal = (input())
+    while cal < "1" or cal > "2":
+        print("""
+invalid input 
+Enter a number from [1 to 2] 
+                """)
+        cal = input()
     match cal:
-        case 1:
+        case "1":
             add = """
 1.ADDITION
 2.SUBTRACTION
@@ -547,20 +650,28 @@ def calculator():
 5.SQUARE 
             """
             print(add)
-            add = int(input())
+            add = (input())
+            while add < "1" or add > "5":
+                print("""
+invalid input 
+Enter a number from [1 to 5] 
+                        """)
+                add = input()
             match add:
-                case 1:
+                case "1":
                     num = int(input("Enter Number "), myCalculator.addNumbers())
                     print(num)
                     return
-                case 2:
+                case "2":
+                    print("enter first number ")
+                    print("enter second number ")
                     myCalculator.subtractNumber()
                     return
-                case 3:
+                case "3":
                     myCalculator.maximum()
                     return
 
-        case 2:
+        case "2":
             calculator()
 
 
@@ -570,12 +681,18 @@ def reminders():
 2.Go back
                 """
     print(remind)
-    remind = int(input())
+    remind = (input())
+    while remind < "1" or remind > "2":
+        print("""
+invalid input 
+Enter a number from [1 to 2] 
+                """)
+        remind = input()
     match remind:
-        case 1:
+        case "1":
             print("Reminder")
             return
-        case 2:
+        case "2":
             reminders()
 
 
@@ -595,27 +712,33 @@ def clock():
 7.Go back
 """
     print(cloc)
-    cloc = int(input())
+    cloc = (input())
+    while cloc < "1" or cloc > "7":
+        print("""
+invalid input 
+Enter a number from [1 to 7] 
+        """)
+        cloc = input()
     match cloc:
-        case 1:
+        case "1":
             print("Alarm clock")
             return
-        case 2:
+        case "2":
             print("Clock settings")
             return
-        case 3:
+        case "3":
             print("Date settings")
             return
-        case 4:
+        case "4":
             print("Stopwatch")
             return
-        case 5:
+        case "5":
             print("Countdown timer")
             return
-        case 6:
+        case "6":
             print("Auto update of date and time")
             return
-        case 7:
+        case "7":
             clock()
 
 
@@ -625,12 +748,18 @@ def profiles():
 2. Go back
                     """
     print(pro)
-    pro = int(input())
+    pro = (input())
+    while pro < "1" or pro > "2":
+        print("""
+invalid input 
+Enter a number from [1 to 2] 
+                """)
+        pro = input()
     match pro:
-        case 1:
+        case "1":
             print("profiles")
             return
-        case 2:
+        case "2":
             mainMenu()
 
 
@@ -640,10 +769,16 @@ def SIM_services():
 2. Go back
                 """
     print(sim)
-    sim = int(input())
+    sim = (input())
+    while sim < "1" or sim > "2":
+        print("""
+invalid input 
+Enter a number from [1 to 2] 
+                """)
+        sim = input()
     match sim:
-        case 1:
+        case "1":
             print("Sim services")
             return
-        case 2:
+        case "2":
             phoneBook()
