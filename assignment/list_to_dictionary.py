@@ -1,7 +1,4 @@
-
-
-
-def list_to_dictionary(list_characters : list):
+def list_to_dictionary(list_characters: list):
     dictionary = {}
     for count in list_characters:
         first_char = count[0].lower()
@@ -9,5 +6,3 @@ def list_to_dictionary(list_characters : list):
             first_char = count[0].upper()
         dictionary.update({first_char: count})
     return dictionary
-
-

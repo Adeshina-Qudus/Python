@@ -6,4 +6,3 @@ for index, value in enumerate(sample_input):
     if index >= 5:
         two_list[1].append(value)
 print(two_list)
-

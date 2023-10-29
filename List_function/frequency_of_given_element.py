@@ -7,5 +7,3 @@ def frequency_element(numbers: list, givenValue: int):
     return set(output_list)
 
 
-
-

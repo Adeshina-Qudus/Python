@@ -29,33 +29,45 @@ def mainMenu():
     while menu < "1" or menu > "13":
         print("Invalid input")
         menu = input("Enter a number from [1 to 13]")
-    match menu:
-        case "1":
-            phoneBook()
-        case "2":
-            message()
-        case "3":
-            chat()
-        case "4":
-            callRegister()
-        case "5":
-            tones()
-        case "6":
-            settings()
-        case "7":
-            callDivert()
-        case "8":
-            games()
-        case "9":
-            calculator()
-        case "10":
-            reminders()
-        case "11":
-            clock()
-        case "12":
-            profiles()
-        case "13":
-            SIM_services()
+        match menu:
+            case "1":
+                phoneBook()
+                return
+            case "2":
+                message()
+                return
+            case "3":
+                chat()
+                return
+            case "4":
+                callRegister()
+                return
+            case "5":
+                tones()
+                return
+            case "6":
+                settings()
+                return
+            case "7":
+                callDivert()
+                return
+            case "8":
+                games()
+                return
+            case "9":
+                calculator()
+                return
+            case "10":
+                reminders()
+                return
+            case "11":
+                clock()
+                return
+            case "12":
+                profiles()
+                return
+            case "13":
+                SIM_services()
 
 
 def phoneBook():
@@ -82,11 +94,8 @@ def phoneBook():
     print(phonebook)
     phonebook = input()
     while phonebook < "1" or phonebook > "11":
-        print("""
-invalid input 
-Enter a number from [1 to 11] 
-                        """)
-        phonebook = input()
+        print("invalid value")
+        phonebook = input(" Enter a number from [1 to 11] ")
         match phonebook:
             case "1":
                 print("Search")
