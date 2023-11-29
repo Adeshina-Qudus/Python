@@ -11,7 +11,7 @@ class PizzaApp:
 
 
 def totalSlices(hungry, semiHungry, classic):
-    hungryTotal = hungry * PizzaApp.hungryPerson
+    hungryTotal = PizzaApp.hungryPerson * hungry
     semiHungryTotal = semiHungry * PizzaApp.semiHungryPerson
     classicTotal = classic * PizzaApp.classicPerson
     return hungryTotal + semiHungryTotal + classicTotal

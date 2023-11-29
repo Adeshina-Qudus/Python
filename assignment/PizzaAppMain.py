@@ -1,4 +1,5 @@
 from assignment import PizzaApp
+
 totalBox = 0
 totalSlices = 0
 haveLeft = 0
@@ -13,39 +14,29 @@ print("""
                 """)
 userInput = input().upper()
 while (userInput != "LARGE") and (userInput != "MEDIUM") and (userInput != "SMALL"):
-        print("ENTER A VALID SIZE OF PIZZA )> ")
-        userInput = input().upper()
+    print("ENTER A VALID SIZE OF PIZZA )> ")
+    userInput = input().upper()
 print("HOW MANY HUNGRY PEOPLE ")
-hungry = input()
+hungry = int(input())
 print("HOW MANY SEMI-HUNGRY PEOPLE ")
-semiHungry = input()
+semiHungry = int(input())
 print("HOW MANY CLASSIC PEOPLE ")
-classic = input()
+classic = int(input())
 if userInput == "LARGE":
-        totalSlices = PizzaApp.totalSlices(hungry, semiHungry, classic)
-        totalBox = PizzaApp.recommendLargestSize(hungry, semiHungry, classic)
-        haveLeft = PizzaApp.largePizzaSlicesLeft(totalSlices, totalBox)
-        price = PizzaApp.largePizzaAmountRecommended(totalBox)
-        print("total slices " + totalSlices)
-        print("have left " + haveLeft)
-        print("total box " + totalBox)
-        print("price " + price)
+    totalSlices = PizzaApp.totalSlices(hungry, semiHungry, classic)
+    totalBox = PizzaApp.recommendLargestSize(hungry, semiHungry, classic)
+    haveLeft = PizzaApp.largePizzaSlicesLeft(totalSlices, totalBox)
+    price = PizzaApp.largePizzaAmountRecommended(totalBox)
+    print(f"total slices {totalSlices} \n have left {haveLeft} \n total box {totalBox}  price {price}")
 if userInput == "MEDIUM":
-        totalSlices = PizzaApp.totalSlices(hungry, semiHungry, classic)
-        totalBox = PizzaApp.recommendMediumSize(hungry, semiHungry, classic)
-        haveLeft = PizzaApp.mediumPizzaSlicesLeft(totalSlices, totalBox)
-        price = PizzaApp.mediumPizzaAmountRecommended(totalBox)
-        print("total slices " + totalSlices)
-        print("have left " + haveLeft)
-        print("total box " + totalBox)
-        print("price " + price)
+    totalSlices = PizzaApp.totalSlices(hungry, semiHungry, classic)
+    totalBox = PizzaApp.recommendMediumSize(hungry, semiHungry, classic)
+    haveLeft = PizzaApp.mediumPizzaSlicesLeft(totalSlices, totalBox)
+    price = PizzaApp.mediumPizzaAmountRecommended(totalBox)
+    print(f"total slices {totalSlices} \n have left {haveLeft} \n total box {totalBox}  price {price}")
 if userInput == "SMALL":
-        totalSlices = PizzaApp.totalSlices(hungry, semiHungry, classic)
-        totalBox = PizzaApp.recommendSmallSize(hungry, semiHungry, classic)
-        haveLeft = PizzaApp.smallPizzaSlicesLeft(totalSlices, totalBox)
-        price = PizzaApp.smallPizzaAmountRecommended(totalBox)
-        print("total slices " + totalSlices)
-        print("total box " + totalBox)
-        print("price " + price)
-
-
+    totalSlices = PizzaApp.totalSlices(hungry, semiHungry, classic)
+    totalBox = PizzaApp.recommendSmallSize(hungry, semiHungry, classic)
+    haveLeft = PizzaApp.smallPizzaSlicesLeft(totalSlices, totalBox)
+    price = PizzaApp.smallPizzaAmountRecommended(totalBox)
+    print(f" total slices {totalSlices} \n have left {haveLeft} \n total box {totalBox}  \n  price {price}")
