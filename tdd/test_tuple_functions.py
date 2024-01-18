@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from tuple_task import tuple_functions
+from assignment.tuple_task import tuple_functions
 
 
 class tupleFunction(TestCase):
