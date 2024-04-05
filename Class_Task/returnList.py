@@ -1,7 +1,8 @@
 def multiplyItSelf(inputted):
     result = []
-    for count in inputted:
-        if count != ",":
-            result.append(int(count)*int(count))
+    for element in inputted:
+        if element != ",": result.append(int(element)*int(element))
     return result
+
+
 
